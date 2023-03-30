@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+    <title>Your To Do List</title>
+</head>
+<body>
+    <div class="div-navbar">
+        <ul>
+            <li><span class="material-symbols-outlined">menu</span></li>
+            <li><span class="material-symbols-outlined">home</span></li>
+        </ul>
+    </div>
+    <div class="main-container">
+        <div class="div-menubar">
+            <div class="default-menubar">
+                <button class="alltask_btn"> <span class="material-symbols-outlined">task</span>All Tasks</button>
+                <button class="today_btn"> <span class="material-symbols-outlined">today</span>Today</button>
+                <button class="upcoming_btn"> <span class="material-symbols-outlined">event_upcoming</span>Upcoming</button>
+            </div>
+            
+            <div class = "projects-menubar">
+                <h3>Projects</h3>
+                <button class = "proj_btn"> <span class="material-symbols-outlined">add_task</span>Add a Project</button>
+            </div>
+        </div>
+        <div class="div-content"></div>
+    </div>
+    <div class="bg_popup">
+        <div class = "popup_div">
+            <div class="close_btn">&times;</div>
+            <div class="addproj_form">
+                <h3>Add a new project</h3>
+                <div class="form_project_name">
+                    <label for="project_name">Project Name</label>
+                    <input type="text" id="project_name" placeholder="Enter the name of the the project">
+                </div>
+                <div class="form_submit">
+                    <button type="submit" class="submit_btn">Enter</button>
+                    <button type="reset" class="reset_btn">Reset Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>
