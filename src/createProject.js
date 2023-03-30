@@ -4,7 +4,6 @@ const addProject = () => {
     const removeForm = document.querySelector(".close_btn");
     const addProjForm = document.querySelector(".addproj_form");
     const projContainer = document.querySelector(".projects-menubar");
-    const buttonAddProj = document.querySelector(".proj_btn");
     
 
     createProjBtn.addEventListener("click", ()=>{
@@ -21,15 +20,41 @@ const addProject = () => {
         const ProjName = addProjForm.elements['project_name'].value;
         const newProject = document.createElement("button");
         newProject.innerHTML = ProjName;
-        newProject.className = ProjName;
+        newProject.className = ProjName.replace(/ +/g, "");
 
-        projContainer.insertBefore(newProject,buttonAddProj);
+        projContainer.insertBefore(newProject,createProjBtn);
+        newProject.addEventListener("click",(e)=>{
+            e.preventDefault();
+            loadProjectContent(newProject.innerHTML)
+        })
+        
         addProjForm.reset();
         document.querySelector(".popup_div").classList.remove("active");
         document.querySelector(".bg_popup").classList.remove("active")
     })
     
  }
- 
+
+ const loadProjectContent = (nameofProject) =>{
+    const contentDiv = document.querySelector(".div-content");
+    const headerProjectName = document.createElement('h1');
+    const taskDiv = document.createElement("div");
+    taskDiv.className = "project-tasks";
+
+    const addTaskBtn = document.createElement("button");
+    addTaskBtn.innerHTML = "+ Add Task"
+    if(contentDiv.innerHTML !==""){
+        contentDiv.innerHTML = "";
+    }
+
+    headerProjectName.innerHTML = nameofProject;
+    taskDiv.appendChild(addTaskBtn);
+    contentDiv.appendChild(headerProjectName);
+    contentDiv.appendChild(taskDiv)
+
+
+
+}
+
 export default addProject;
 

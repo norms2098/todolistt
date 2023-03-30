@@ -188,3 +188,36 @@ li:hover{
     color:white;
 }
 /*popup form css ends here*/
+
+.div-content{
+    height:auto;
+    width:80vw;
+    
+}
+.div-content h1{
+    text-align: left;
+    padding-left: 10%;;
+}
+
+.project-tasks{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap:2vh;
+    padding:1% 0 1% 0;
+    height:auto;
+
+}
+.project-tasks button{
+    width:40%;
+    padding:2%;
+    cursor: pointer;
+    background: lightgray;
+    border:none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.project-tasks button:hover{
+    background: grey;
+}
