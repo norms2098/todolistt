@@ -43,6 +43,10 @@ const addProject = () => {
 
     const addTaskBtn = document.createElement("button");
     addTaskBtn.innerHTML = "+ Add Task"
+    addTaskBtn.addEventListener('click',()=>{
+        alert("click");
+    })
+
     if(contentDiv.innerHTML !==""){
         contentDiv.innerHTML = "";
     }
@@ -52,6 +56,7 @@ const addProject = () => {
     contentDiv.appendChild(headerProjectName);
     contentDiv.appendChild(taskDiv)
 
+    
 
 
 }
