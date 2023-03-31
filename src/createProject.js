@@ -43,8 +43,13 @@ const addProject = () => {
 
     const addTaskBtn = document.createElement("button");
     addTaskBtn.innerHTML = "+ Add Task"
-    addTaskBtn.addEventListener('click',()=>{
-        alert("click");
+
+    addTaskBtn.addEventListener('click',(e)=>{
+        e.preventDefault();
+
+        document.querySelector(".popup_addTask").classList.add("active");
+        document.querySelector(".bg_popup").classList.add("active");
+        //addTasktoProject();
     })
 
     if(contentDiv.innerHTML !==""){
@@ -55,11 +60,9 @@ const addProject = () => {
     taskDiv.appendChild(addTaskBtn);
     contentDiv.appendChild(headerProjectName);
     contentDiv.appendChild(taskDiv)
-
-    
-
-
 }
-
+const addTasktoProject = () =>{
+    
+}
 export default addProject;
 

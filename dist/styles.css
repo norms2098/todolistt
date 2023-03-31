@@ -81,8 +81,8 @@ li:hover{
 }
 
 /*for popup form*/
-.popup_div{
-    position: absolute;
+.popup_div, .popup_addTask{
+    position: relative;
     border: 1px solid black;
     top:50%;
     left:50%;
@@ -94,8 +94,9 @@ li:hover{
     flex-direction: column;
     border-radius: 10px;
     opacity: 0;
+    pointer-events: none;
 }
-.popup_div.active{
+.popup_div.active ,.popup_addTask.active{
     opacity: 1;
     position: absolute;
     border: 1px solid black;
@@ -108,6 +109,7 @@ li:hover{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    pointer-events: all;
 }
 .bg_popup{
   position: fixed;
@@ -158,7 +160,7 @@ li:hover{
 .submit_btn:hover,.reset_btn:hover{
     cursor: pointer;
 }
-.form_project_name{
+.form_project_name,.addTask_form{
     display: flex;
     flex-direction: column;
     padding: 5%;
@@ -166,7 +168,7 @@ li:hover{
     gap:1vh;
     color:white;
 }
-.form_project_name input{
+.form_project_name input,.addTask_form input{
     height:5vh;
     width: 20vw;
     border: none;
@@ -221,3 +223,6 @@ li:hover{
 .project-tasks button:hover{
     background: grey;
 }
+
+
+

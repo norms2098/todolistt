@@ -51,6 +51,33 @@
                 </div>
             </form>
         </div>
+        <div class = "popup_addTask">
+            <div class="close_btn">&times;</div>
+            <form class="addTask_form">
+                <h3>Add a task</h3>
+                <div class="form_taskname">
+                    <label for="task_name">Task Name</label>
+                    <input type="text" id="task_name" placeholder="Enter the name of task">
+                </div>
+                <div class="form_taskDescription">
+                    <label for="task_description">Task Description</label>
+                    <input type="text" id="task_description" placeholder="Enter Description for this task">
+                </div>
+                <div class="form_priority">
+                    <label for="task_priority">Task Priority</label>
+                    <input list="task_priority" name="priority">
+                    <datalist id="task_priority">
+                        <option value="Low Priority">
+                        <option value="Medium Priority">
+                        <option value="High Priority">
+                    </datalist>
+                </div>
+                <div class="form_submit">
+                    <button type="submit" class="submit_btn">Enter</button>
+                    <button type="reset" class="reset_btn">Reset Info</button>
+                </div>
+            </form>
+        </div>
     </div>
     
 </body>
